@@ -1,0 +1,29 @@
+# Path to XRay access log file
+LogFile: "/usr/local/x-ui/access.log"
+
+# Webhook URL to send geolocation data
+WebhookURL: "https://example.com/webhook"
+
+# Optional. Name of the host in webhook data (default: os hostname)
+Hostname: ""
+
+# Time in minutes to store IP addresses in cache (default: 30)
+# IPs won't be processed again within this time window
+IPTTLMinutes: 30
+
+# Rate limit for ip-api.com requests per minute (default: 45)
+# Free tier allows 45 requests per minute
+RateLimitPerMinute: 45
+
+# Size of the IP processing queue (default: 3000)
+# Increase if you have high traffic and IPs are being dropped
+QueueSize: 3000
+
+# HTTP timeout in seconds for ip-api.com requests (default: 5)
+HTTPTimeoutSeconds: 5
+
+# HTTP timeout in seconds for webhook requests (default: 5)
+WebhookTimeoutSeconds: 5
+
+# Interval in minutes for cleaning up expired IPs from storage (default: 1)
+CleanupIntervalMinutes: 1
